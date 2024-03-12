@@ -13,20 +13,20 @@ function Header() {
 
   return (
     <Container>
-      <a href="#">
+      <a>
         <img src="/images/logo.svg" alt="" />
       </a>
       <Menu>
         {/* map car data */}
         {
           cars && cars.map((car, index) =>
-            <a key={index} href="#">{car}</a>
+            <a key={index}>{car}</a>
           )
         }
         </Menu>
       <RightMenu>
-        <a href="#">Shop</a>
-        <a href="#">Tesla Account</a>
+        <a>Shop</a>
+        <a>Tesla Account</a>
         <CustomMenu onClick={() => setBurgerStatus(true)} />
       </RightMenu>
       <BurgerNav show={burgerStatus}>
@@ -36,20 +36,20 @@ function Header() {
         {/* map car data */}
         {
           cars && cars.map((car, index) =>
-            <li key={index}><a href="#">{car}</a></li>
+            <li key={index}><a>{car}</a></li>
           )
         }
         <li>
-          <a href="#">Existing Inventory</a>
+          <a>Existing Inventory</a>
         </li>
         <li>
-          <a href="#">Trade-in</a>
+          <a>Trade-in</a>
         </li>
         <li>
-          <a href="#">Cypertruck</a>
+          <a>Cypertruck</a>
         </li>
         <li>
-          <a href="#">Roadaster</a>
+          <a>Roadaster</a>
         </li>
       </BurgerNav>
     </Container>
