@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import Fade from "react-reveal/Fade";
+import 'animate.css';
 
 function Section({
   title,
@@ -11,19 +11,19 @@ function Section({
 }) {
   return (
     <Wrap bgImage={backgroundImg}>
-      <Fade bottom>
+      <div className="animate__backInUp">
         <ItemText>
           <h1>{title}</h1>
           <p>{description}</p>
         </ItemText>
-      </Fade>
+      </div>
       <ButtonsContainer>
-        <Fade bottom>
+        <div className="animate__backInUp">
           <ButtonGroup>
             <LeftButton>{leftBtnText}</LeftButton>
             {rightBtnText && <RightButton>{rightBtnText}</RightButton>}
           </ButtonGroup>
-        </Fade>
+        </div>
         <DownArrow src="/images/down-arrow.svg" />
       </ButtonsContainer>
     </Wrap>
